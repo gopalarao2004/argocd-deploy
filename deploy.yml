@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: reyadocker/internetbankingrepo:latest
+        image: gopalarao2004/my-nginx-app:tagname
+
 ---
 apiVersion: v1
 kind: Service
