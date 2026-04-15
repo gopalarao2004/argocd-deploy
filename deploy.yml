@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mobilebanking-rs
+  name: protfolio
   labels:
-    app: bank
+    app: mine
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: bank
+      app: mine
   template:
     metadata:
       labels:
-        app: bank
+        app: mine
     spec:
       containers:
       - name: cont1
-        image: gopalarao2004/my-nginx-app:tagname
+        image: gopalarao2004/gopal-portfolio:tagname
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: mobilebankingservice
+  name: protfolioservice
 spec:
   type: LoadBalancer
   selector:
-    app: bank
+    app: mine
   ports:
     - port: 80
       nodeport: 31433
