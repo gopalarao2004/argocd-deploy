@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: gopalarao2004/gopal-portfolio:tagname
+        image: gopalarao2004/gopal-portfolio
 
 ---
 apiVersion: v1
